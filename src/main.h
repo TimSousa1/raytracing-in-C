@@ -7,9 +7,10 @@
 #define BIT_DEPTH 255
 
 typedef struct {
-    int x;
-    int y;
+    float x;
+    float  y;
 } Vector2;
+
 
 typedef struct {
     int r;

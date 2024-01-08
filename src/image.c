@@ -24,7 +24,7 @@ int render_image(Image image, char *out_file){
 
 // convert between two ranges
 int convert(float conv, Vector2 init, Vector2 final){
-    int idelta, fdelta, ret;
+    float idelta, fdelta, ret;
     idelta = init.y - init.x;
     fdelta = final.y - final.x;
     ret = (((conv - init.x) * fdelta) / idelta) + final.x;
