@@ -53,6 +53,18 @@ Vector3 normV3(Vector3 v) {
     return scaleV3(v, q_rsqrt( modsqV3(v) ));
 }
 
+Vector3 perpV3(Vector3 v1, Vector3 v2){
+    return (Vector3) {v1.y*v2.z - v1.z*v2.y, v1.z*v2.x - v1.x*v2.z, v1.x*v2.y - v1.y*v2.x};
+}
+
 void printV3(Vector3 v) {
     printf("(%f, %f, %f)", v.x, v.y, v.z);
+}
+
+void printM32(M32 m){
+    printf("|");
+    printV3(m.x);
+    printf("|\n|");
+    printV3(m.y);
+    printf("|");
 }

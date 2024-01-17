@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "main.h"
 
-int render_image(Image image, char *out_file){
+int save_image(Image image, char *out_file){
     FILE *rendered_image = fopen(out_file, "w");
     if (!rendered_image) {
         fprintf(stderr, "Couldn't open file for saving!\n");
